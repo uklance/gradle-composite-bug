@@ -1,0 +1,18 @@
+buildscript {
+	dependencies {
+		classpath 'com.example:my-plugin:1.0-SNAPSHOT'
+	}
+}
+
+class ConcreteTask extends com.example.AbstractTask {
+	String getGreeting() {
+		return 'Hello World!'
+	}
+}
+
+apply plugin: 'base'
+
+task concreteTask(type: ConcreteTask) {
+}
+
+build.dependsOn concreteTask
