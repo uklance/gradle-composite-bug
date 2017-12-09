@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'com.example:my-plugin:1.0-SNAPSHOT'
+}
+
